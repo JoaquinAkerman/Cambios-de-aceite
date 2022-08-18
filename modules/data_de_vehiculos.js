@@ -1,8 +1,8 @@
 export const dataDeVehiculos = [
   {
     nombre: 'Ford F100',
-    proximoCambio: '99468km',
-    fechaProximoCambio: '25/08/2023',
+    proximoCambio: '105900km',
+    fechaProximoCambio: '10/08/2023',
     link: 'https://drive.google.com/drive/folders/1xvcaQM34ojaXJEB1iJxsXQV26AR7lo7a?usp=sharing',
   },
 
@@ -47,6 +47,7 @@ export const dataDeVehiculos = [
   {
     nombre: 'Massey 6712 (Power Shuttle)',
     proximoCambio: '1000hs',
+    fechaProximoCambio: '',
     comentario: 'con 800hs en concesionario',
     link: 'https://drive.google.com/drive/folders/1lteIqkj_jrUboFQzui9C3pnctyGVGtIA?usp=sharing',
   },
@@ -77,6 +78,7 @@ export const dataDeVehiculos = [
   {
     nombre: 'Valtra',
     proximoCambio: '5063 hs',
+    fechaProximoCambio: '',
     comentario: 'Controlar aceites diferencial y caja',
     link: 'https://drive.google.com/drive/folders/1ay9IBNS0cg-Czq5FpLF1vs6GB285xfeV?usp=sharing',
   },
