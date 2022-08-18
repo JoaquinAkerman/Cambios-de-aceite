@@ -1,6 +1,9 @@
 import { verDetalles } from './servicios.js';
 
-function chequearFecha(fechaDeCambio, fechaActual) {}
+function setearProximoCambio(fechaDeCambio, fechaActual) {
+  if (fechaDeCambio > fechaActual) {
+  }
+}
 
 function mostrarVehiculos(dataDeVehiculos) {
   const $contenidoDeTabla = document.querySelector('#contendio-de-tabla');
