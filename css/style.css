@@ -1,14 +1,18 @@
 body {
-    text-align: center;
+  text-align: center;
 }
 
 div {
-    display: inline-block;
+  display: inline-block;
 }
 
+th,
+td {
+  border: 1px solid black;
+  padding: 5px;
+  max-width: 230px;
+}
 
-
-th, td {
-    border: 1px solid black;
-    padding: 5px;
+.alerta {
+  background-color: red;
 }
