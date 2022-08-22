@@ -1,12 +1,31 @@
-import { verDetalles } from './servicios.js';
+import {
+  obtenerFechaActual,
+  verDetalles,
+  ordenarFechaParaComparar,
+} from './servicios.js';
+import { dataDeVehiculos } from './data_de_vehiculos.js';
 
-function setearProximoCambio(fechaDeCambio, fechaActual) {
-  if (fechaDeCambio > fechaActual) {
+function resaltar(dataFechaDeCambio, $fecha) {
+  const fechaActualFinal = obtenerFechaActual();
+  const fechaDeCambio = dataFechaDeCambio.split('-'); /// tiene formato dd-MM-yyyy
+  const fechaDeCambioOrdenada = [
+    fechaDeCambio[2],
+    fechaDeCambio[1],
+    fechaDeCambio[0],
+  ];
+  const fechaDeCambioFinal = ordenarFechaParaComparar(fechaDeCambioOrdenada);
+
+  if (fechaActualFinal > fechaDeCambioFinal) {
+    const aviso = ' realizar cambio';
+    $fecha.classList = 'alerta';
+    $fecha.append(aviso);
   }
 }
 
 function mostrarVehiculos(dataDeVehiculos) {
   const $contenidoDeTabla = document.querySelector('#contendio-de-tabla');
+  const $titulo = document.querySelector('#titulo');
+
   dataDeVehiculos.forEach((vehiculo) => {
     const { nombre, proximoCambio, fechaProximoCambio, link } = vehiculo;
     const $nuevoVehiculo = document.createElement('tr');
@@ -27,7 +46,16 @@ function mostrarVehiculos(dataDeVehiculos) {
     $nuevoVehiculo.appendChild($proximoCambio);
     $nuevoVehiculo.appendChild($verDetalles);
     $contenidoDeTabla.appendChild($nuevoVehiculo);
+    resaltar(fechaProximoCambio, $proximoCambio);
+    actualizaH1($titulo);
   });
 }
 
-export { mostrarVehiculos };
+function actualizaH1(titulo) {
+  titulo.textContent = 'Vehículos';
+}
+
+function inicializar() {
+  mostrarVehiculos(dataDeVehiculos);
+}
+export { mostrarVehiculos, inicializar };
