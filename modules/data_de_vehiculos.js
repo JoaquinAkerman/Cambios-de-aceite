@@ -13,7 +13,7 @@ export const dataDeVehiculos = [
     link: 'https://drive.google.com/drive/folders/12u-i64HDN3hPGbifcGSrlDU9O8YIcgZ3?usp=sharing',
   },
   {
-    nombre: 'grupo gallineros motor John Deere',
+    nombre: 'Grupo gallineros motor John Deere',
     proximoCambio: '319hs',
     fechaProximoCambio: '24-08-2022',
     link: 'https://drive.google.com/drive/folders/1Y3AxsyJP62cww2vmU2Q33rx9tkWx09sJ?usp=sharing',
