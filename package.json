@@ -4,7 +4,7 @@
   "description": "Control de servicios  realizados",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cypress:open": "cypress open"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/JoaquinAkerman/Servi-de-vehiculos/issues"
   },
-  "homepage": "https://github.com/JoaquinAkerman/Servi-de-vehiculos#readme"
+  "homepage": "https://github.com/JoaquinAkerman/Servi-de-vehiculos#readme",
+  "dependencies": {
+    "cypress": "^10.6.0"
+  }
 }

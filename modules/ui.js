@@ -4,6 +4,7 @@ import {
   ordenarFechaParaComparar,
 } from './servicios.js';
 import { dataDeVehiculos } from './data_de_vehiculos.js';
+import { ordenaralfabeticamente, kebabCase } from './utilidades.js';
 
 function resaltar(dataFechaDeCambio, $fecha) {
   const fechaActualFinal = obtenerFechaActual();
@@ -26,11 +27,13 @@ function mostrarVehiculos(dataDeVehiculos) {
   const $contenidoDeTabla = document.querySelector('#contendio-de-tabla');
   const $titulo = document.querySelector('#titulo');
 
-  dataDeVehiculos.forEach((vehiculo) => {
+  ordenaralfabeticamente(dataDeVehiculos).forEach((vehiculo) => {
     const { nombre, proximoCambio, fechaProximoCambio, link } = vehiculo;
     const $nuevoVehiculo = document.createElement('tr');
     const $nombreDelVehiculo = document.createElement('th');
+    $nombreDelVehiculo.id = kebabCase(nombre);
     const $proximoCambio = document.createElement('td');
+    $proximoCambio.id = `fecha-de-cambio-${kebabCase(nombre)}`;
     const $verDetalles = document.createElement('td');
     const $botonVerDetalles = document.createElement('button');
     $botonVerDetalles.classList = 'btn btn-info';
@@ -38,6 +41,7 @@ function mostrarVehiculos(dataDeVehiculos) {
     $botonVerDetalles.onclick = () => {
       verDetalles(link);
     };
+    $botonVerDetalles.id = `detalles-${kebabCase(nombre)}`;
     $nombreDelVehiculo.scope = 'row';
     $nombreDelVehiculo.textContent = nombre;
     $proximoCambio.textContent = `${proximoCambio} o el ${fechaProximoCambio}`;
@@ -58,4 +62,5 @@ function actualizaH1(titulo) {
 function inicializar() {
   mostrarVehiculos(dataDeVehiculos);
 }
+
 export { mostrarVehiculos, inicializar };
