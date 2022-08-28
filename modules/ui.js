@@ -23,12 +23,19 @@ function resaltar(dataFechaDeCambio, $fecha) {
   }
 }
 
+function chequearComentario(comentario) {
+  if (comentario !== '') {
+    return `Comentario: ${comentario}`;
+  } else return '';
+}
+
 function mostrarVehiculos(dataDeVehiculos) {
   const $contenidoDeTabla = document.querySelector('#contendio-de-tabla');
   const $titulo = document.querySelector('#titulo');
 
   ordenaralfabeticamente(dataDeVehiculos).forEach((vehiculo) => {
-    const { nombre, proximoCambio, fechaProximoCambio, link } = vehiculo;
+    const { nombre, proximoCambio, fechaProximoCambio, link, comentario } =
+      vehiculo;
     const $nuevoVehiculo = document.createElement('tr');
     const $nombreDelVehiculo = document.createElement('th');
     $nombreDelVehiculo.id = kebabCase(nombre);
@@ -44,7 +51,9 @@ function mostrarVehiculos(dataDeVehiculos) {
     $botonVerDetalles.id = `detalles-${kebabCase(nombre)}`;
     $nombreDelVehiculo.scope = 'row';
     $nombreDelVehiculo.textContent = nombre;
-    $proximoCambio.textContent = `${proximoCambio} o el ${fechaProximoCambio}`;
+    $proximoCambio.textContent = `${proximoCambio} o el ${fechaProximoCambio} ${chequearComentario(
+      comentario,
+    )}`;
     $verDetalles.appendChild($botonVerDetalles);
     $nuevoVehiculo.appendChild($nombreDelVehiculo);
     $nuevoVehiculo.appendChild($proximoCambio);
