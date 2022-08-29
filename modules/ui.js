@@ -25,7 +25,7 @@ function resaltar(dataFechaDeCambio, $fecha) {
 
 function chequearComentario(comentario) {
   if (comentario !== '') {
-    return `Comentario: ${comentario}`;
+    return ` ${comentario}`;
   } else return '';
 }
 
