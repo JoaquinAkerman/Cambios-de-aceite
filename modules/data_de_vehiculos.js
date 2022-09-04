@@ -134,4 +134,11 @@ export const dataDeVehiculos = [
     comentario: '',
     link: 'https://drive.google.com/drive/folders/1eWKiQ5VjpTOiXW9l_s9TqlQfd1Ocx4qC',
   },
+  {
+    nombre: 'Volvo hju-528',
+    proximoCambio: '560030km',
+    fechaProximoCambio: '07-06-2023',
+    comentario: '',
+    link: 'https://docs.google.com/spreadsheets/d/1fsgqIisTxh9Hwnt63kI4rfXcyiz9aufs/edit#gid=35771524',
+  },
 ];
