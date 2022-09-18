@@ -100,14 +100,14 @@ export const dataDeVehiculos = [
   },
   {
     nombre: 'Volvo ad695**',
-    proximoCambio: '132672km',
-    comentario: '',
-    fechaProximoCambio: '16-04-2023',
+    proximoCambio: '153061km',
+    comentario: 'prox no cambiar filtros gasoil ',
+    fechaProximoCambio: '17-09-2023',
     link: 'https://drive.google.com/drive/folders/1xxhuzADUWA-F_M1KHt6vbBR8YiuIQYKU?usp=sharing',
   },
   {
     nombre: 'Volvo ab969**',
-    proximoCambio: '374382km',
+    proximoCambio: '397420km',
     fechaProximoCambio: '29-04-2023',
     comentario: 'Cambió filtro secante en mecanico',
     link: 'https://drive.google.com/drive/folders/1BxUgoI39s6RlNdcQzoqUErPkFRrsXnks?usp=sharing',
