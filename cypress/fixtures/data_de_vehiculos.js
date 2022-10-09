@@ -1,10 +1,10 @@
 export const dataDeVehiculos = [
   {
-    nombre: 'Sprinter Pasajeros',
-    proximoCambio: '8621hs',
-    fechaProximoCambio: '23-09-2023',
+    nombre: 'Ford F100',
+    proximoCambio: '105900km',
+    fechaProximoCambio: '10-08-2023',
     comentario: '',
-    link: 'https://drive.google.com/drive/folders/1HkBC6R-8vb8GoGJp5_9A_5yilHMmWHap?hl=es',
+    link: 'https://drive.google.com/drive/folders/1xvcaQM34ojaXJEB1iJxsXQV26AR7lo7a?usp=sharing',
   },
   {
     nombre: 'Pala LonKing',
@@ -12,13 +12,6 @@ export const dataDeVehiculos = [
     fechaProximoCambio: '03-10-2023',
     comentario: '',
     link: 'https://drive.google.com/drive/folders/19LoHptRz9ey26ds6kHXQDBnSrlIORHSr?hl=es',
-  },
-  {
-    nombre: 'Ford F100',
-    proximoCambio: '105900km',
-    fechaProximoCambio: '10-08-2023',
-    comentario: '',
-    link: 'https://drive.google.com/drive/folders/1xvcaQM34ojaXJEB1iJxsXQV26AR7lo7a?usp=sharing',
   },
 
   {
