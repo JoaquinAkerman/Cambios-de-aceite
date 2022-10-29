@@ -65,9 +65,9 @@ export const dataDeVehiculos = [
   },
   {
     nombre: 'Massey 6712 (Power Shuttle)',
-    proximoCambio: '1000hs',
-    fechaProximoCambio: '****',
-    comentario: 'Realizado con 800hs en concesionario',
+    proximoCambio: '1586hs',
+    fechaProximoCambio: '04-09-2023',
+    comentario: 'Prox cambiar filtros gasoil',
     link: 'https://drive.google.com/drive/folders/1lteIqkj_jrUboFQzui9C3pnctyGVGtIA?usp=sharing',
   },
   {
@@ -79,9 +79,9 @@ export const dataDeVehiculos = [
   },
   {
     nombre: 'Mercedes volcador',
-    proximoCambio: '340hs',
-    fechaProximoCambio: '07-06-2023',
-    comentario: '',
+    proximoCambio: '574hs',
+    fechaProximoCambio: '27-10-2023',
+    comentario: 'Reparación radiador',
     link: 'https://drive.google.com/drive/folders/1EMjsNMAe1WenQOAxp8UdYT4AawfdgpxM?usp=sharing',
   },
   {
