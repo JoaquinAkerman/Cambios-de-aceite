@@ -121,9 +121,9 @@ export const dataDeVehiculos = [
   },
   {
     nombre: 'Volvo ab969**',
-    proximoCambio: '397420km',
-    fechaProximoCambio: '29-04-2023',
-    comentario: 'Cambió filtro secante en mecanico',
+    proximoCambio: '441444km',
+    fechaProximoCambio: '14-11-2023',
+    comentario: 'Prox cambiar filtros gasoil',
     link: 'https://drive.google.com/drive/folders/1BxUgoI39s6RlNdcQzoqUErPkFRrsXnks?usp=sharing',
   },
 
@@ -149,7 +149,7 @@ export const dataDeVehiculos = [
     link: 'https://drive.google.com/drive/folders/1eWKiQ5VjpTOiXW9l_s9TqlQfd1Ocx4qC',
   },
   {
-    nombre: 'Volvo hju-528',
+    nombre: 'Volvo hju-52*',
     proximoCambio: '560030km',
     fechaProximoCambio: '07-06-2023',
     comentario: '',
