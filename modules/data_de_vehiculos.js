@@ -100,9 +100,9 @@ export const dataDeVehiculos = [
   },
   {
     nombre: 'Valtra',
-    proximoCambio: '5063 hs',
-    fechaProximoCambio: '****',
-    comentario: 'Controlar aceites diferencial y caja',
+    proximoCambio: '5300 hs',
+    fechaProximoCambio: '30-11-2023',
+    comentario: 'Prox cambiar filtros gasoil',
     link: 'https://drive.google.com/drive/folders/1ay9IBNS0cg-Czq5FpLF1vs6GB285xfeV?usp=sharing',
   },
   {
