@@ -25,9 +25,9 @@ function ordenaralfabeticamente(objeto) {
 
   return objeto;
 }
-const kebabCase = (string) =>
+const transpilToKebabCase = (string) =>
   string
     .replace(/([a-z])([A-Z])/g, '$1-$2')
     .replace(/[\s_]+/g, '-')
     .toLowerCase();
-export { ordenaralfabeticamente, kebabCase };
+export { transpilToKebabCase, ordenaralfabeticamente };
