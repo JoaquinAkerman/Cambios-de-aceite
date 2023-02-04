@@ -21,7 +21,7 @@ function sortAlphabetically(object) {
     };
   }
 
-  object.sort(dynamicSort('nombre'));
+  object.sort(dynamicSort('name'));
 
   return object;
 }

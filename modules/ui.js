@@ -2,65 +2,63 @@ import { getCurrentDate, viewDetails, sortDateForComparison } from './services.j
 import { dataDeVehiculos } from './vehicle_data.js';
 import { sortAlphabetically, transpilToKebabCase } from './utilities.js';
 
-function resaltar(dataFechaDeCambio, $fecha) {
-  const fechaActualFinal = getCurrentDate();
-  const fechaDeCambio = dataFechaDeCambio.split('-'); /// tiene formato dd-MM-yyyy
-  const fechaDeCambioOrdenada = [fechaDeCambio[2], fechaDeCambio[1], fechaDeCambio[0]];
-  const fechaDeCambioFinal = sortDateForComparison(fechaDeCambioOrdenada);
+function highlight(dateChangeData, $date) {
+  const finalCurrentDate = getCurrentDate();
+  const changeDate = dateChangeData.split('-'); // has format dd-MM-yyyy
+  const sortedChangeDate = [changeDate[2], changeDate[1], changeDate[0]];
+  const finalChangeDate = sortDateForComparison(sortedChangeDate);
 
-  if (fechaActualFinal > fechaDeCambioFinal) {
-    const aviso = ' realizar cambio';
-    $fecha.classList = 'alerta';
-    $fecha.append(aviso);
+  if (finalCurrentDate > finalChangeDate) {
+    const alert = ' realizar cambio';
+    $date.classList = 'alert';
+    $date.append(alert);
   }
 }
 
-function chequearComentario(comentario) {
-  if (comentario !== '') {
-    return ` ${comentario}`;
+function checkComment(comment) {
+  if (comment !== '') {
+    return ` ${comment}`;
   } else return '';
 }
 
-function mostrarVehiculos(dataDeVehiculos) {
-  const $contenidoDeTabla = document.querySelector('#contendio-de-tabla');
-  const $titulo = document.querySelector('#titulo');
+function showVehicles(vehicleData) {
+  const $tableContent = document.querySelector('#table-content');
+  const $title = document.querySelector('#title');
 
-  sortAlphabetically(dataDeVehiculos).forEach((vehiculo) => {
-    const { nombre, proximoCambio, fechaProximoCambio, link, comentario } = vehiculo;
-    const $nuevoVehiculo = document.createElement('tr');
-    const $nombreDelVehiculo = document.createElement('th');
-    $nombreDelVehiculo.id = transpilToKebabCase(nombre);
-    const $proximoCambio = document.createElement('td');
-    $proximoCambio.id = `fecha-de-cambio-${transpilToKebabCase(nombre)}`;
-    const $verDetalles = document.createElement('td');
-    const $botonVerDetalles = document.createElement('button');
-    $botonVerDetalles.classList = 'btn btn-info';
-    $botonVerDetalles.textContent = 'Detalles';
-    $botonVerDetalles.onclick = () => {
+  sortAlphabetically(vehicleData).forEach((vehicle) => {
+    const { name, nextChange, nextChangeDate, link, comment } = vehicle;
+    const $newVehicle = document.createElement('tr');
+    const $vehicleName = document.createElement('th');
+    $vehicleName.id = transpilToKebabCase(name);
+    const $nextChange = document.createElement('td');
+    $nextChange.id = `change-date-${transpilToKebabCase(name)}`;
+    const $viewDetails = document.createElement('td');
+    const $viewDetailsButton = document.createElement('button');
+    $viewDetailsButton.classList = 'btn btn-info';
+    $viewDetailsButton.textContent = 'Details';
+    $viewDetailsButton.onclick = () => {
       viewDetails(link);
     };
-    $botonVerDetalles.id = `detalles-${transpilToKebabCase(nombre)}`;
-    $nombreDelVehiculo.scope = 'row';
-    $nombreDelVehiculo.textContent = nombre;
-    $proximoCambio.textContent = `${proximoCambio} o el ${fechaProximoCambio} ${chequearComentario(
-      comentario,
-    )}`;
-    $verDetalles.appendChild($botonVerDetalles);
-    $nuevoVehiculo.appendChild($nombreDelVehiculo);
-    $nuevoVehiculo.appendChild($proximoCambio);
-    $nuevoVehiculo.appendChild($verDetalles);
-    $contenidoDeTabla.appendChild($nuevoVehiculo);
-    resaltar(fechaProximoCambio, $proximoCambio);
-    actualizaH1($titulo);
+    $viewDetailsButton.id = `details-${transpilToKebabCase(name)}`;
+    $vehicleName.scope = 'row';
+    $vehicleName.textContent = name;
+    $nextChange.textContent = `${nextChange} or ${nextChangeDate} ${checkComment(comment)}`;
+    $viewDetails.appendChild($viewDetailsButton);
+    $newVehicle.appendChild($vehicleName);
+    $newVehicle.appendChild($nextChange);
+    $newVehicle.appendChild($viewDetails);
+    $tableContent.appendChild($newVehicle);
+    highlight(nextChangeDate, $nextChange);
+    updateH1($title);
   });
 }
 
-function actualizaH1(titulo) {
-  titulo.textContent = 'Vehículos';
+function updateH1(title) {
+  title.textContent = 'Vehicles';
 }
 
-function inicializar() {
-  mostrarVehiculos(dataDeVehiculos);
+function initialize() {
+  showVehicles(dataDeVehiculos);
 }
 
-export { mostrarVehiculos, inicializar };
+export { showVehicles, initialize };

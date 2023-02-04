@@ -3,13 +3,13 @@
 import { dataDeVehiculos } from '../../modules/vehicle_data';
 
 describe('Carga los vehiculos', () => {
-  it('Chequea que se muestre la alerta en los elementos con clase alerta', () => {
+  it('Checks that the alert is shown in the elements with class alert', () => {
     cy.visit('http://127.0.0.1:81/');
-    cy.get('.alerta').should('contain.text', 'realizar cambio');
+    cy.get('.alert').should('contain.text', 'realizar cambio');
   });
-  it('Chequea que el elemento ford-f100 tenga el id y texto correspondiente', () => {
-    const { nombre, proximoCambio, fechaProximoCambio } = dataDeVehiculos[0];
-    cy.get('#ford-f100').should('contain.text', nombre);
-    cy.get('#fecha-de-cambio-ford-f100').should('contain.text', proximoCambio, fechaProximoCambio);
+  it('Checks that the ford-f100 element has the corresponding id and text', () => {
+    const { name, nextChange, nextChangeDate } = dataDeVehiculos[0];
+    cy.get('#ford-f100').should('contain.text', name);
+    cy.get('#change-date-ford-f100').should('contain.text', nextChange, nextChangeDate);
   });
 });
