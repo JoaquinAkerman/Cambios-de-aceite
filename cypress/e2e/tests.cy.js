@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-import { dataDeVehiculos } from '../../modules/data_de_vehiculos';
+import { dataDeVehiculos } from '../../modules/vehicle_data';
 
 describe('Carga los vehiculos', () => {
   it('Chequea que se muestre la alerta en los elementos con clase alerta', () => {

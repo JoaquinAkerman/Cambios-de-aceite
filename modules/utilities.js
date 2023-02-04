@@ -1,4 +1,4 @@
-function ordenaralfabeticamente(objeto) {
+function sortAlphabetically(object) {
   /**
    * Function to sort alphabetically an array of objects by some specific key.
    *
@@ -21,13 +21,13 @@ function ordenaralfabeticamente(objeto) {
     };
   }
 
-  objeto.sort(dynamicSort('nombre'));
+  object.sort(dynamicSort('nombre'));
 
-  return objeto;
+  return object;
 }
 const transpilToKebabCase = (string) =>
   string
     .replace(/([a-z])([A-Z])/g, '$1-$2')
     .replace(/[\s_]+/g, '-')
     .toLowerCase();
-export { transpilToKebabCase, ordenaralfabeticamente };
+export { transpilToKebabCase, sortAlphabetically };

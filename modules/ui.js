@@ -1,12 +1,12 @@
-import { obtenerFechaActual, verDetalles, ordenarFechaParaComparar } from './servicios.js';
-import { dataDeVehiculos } from './data_de_vehiculos.js';
-import { ordenaralfabeticamente, transpilToKebabCase } from './utilidades.js';
+import { getCurrentDate, viewDetails, sortDateForComparison } from './services.js';
+import { dataDeVehiculos } from './vehicle_data.js';
+import { sortAlphabetically, transpilToKebabCase } from './utilities.js';
 
 function resaltar(dataFechaDeCambio, $fecha) {
-  const fechaActualFinal = obtenerFechaActual();
+  const fechaActualFinal = getCurrentDate();
   const fechaDeCambio = dataFechaDeCambio.split('-'); /// tiene formato dd-MM-yyyy
   const fechaDeCambioOrdenada = [fechaDeCambio[2], fechaDeCambio[1], fechaDeCambio[0]];
-  const fechaDeCambioFinal = ordenarFechaParaComparar(fechaDeCambioOrdenada);
+  const fechaDeCambioFinal = sortDateForComparison(fechaDeCambioOrdenada);
 
   if (fechaActualFinal > fechaDeCambioFinal) {
     const aviso = ' realizar cambio';
@@ -25,7 +25,7 @@ function mostrarVehiculos(dataDeVehiculos) {
   const $contenidoDeTabla = document.querySelector('#contendio-de-tabla');
   const $titulo = document.querySelector('#titulo');
 
-  ordenaralfabeticamente(dataDeVehiculos).forEach((vehiculo) => {
+  sortAlphabetically(dataDeVehiculos).forEach((vehiculo) => {
     const { nombre, proximoCambio, fechaProximoCambio, link, comentario } = vehiculo;
     const $nuevoVehiculo = document.createElement('tr');
     const $nombreDelVehiculo = document.createElement('th');
@@ -37,7 +37,7 @@ function mostrarVehiculos(dataDeVehiculos) {
     $botonVerDetalles.classList = 'btn btn-info';
     $botonVerDetalles.textContent = 'Detalles';
     $botonVerDetalles.onclick = () => {
-      verDetalles(link);
+      viewDetails(link);
     };
     $botonVerDetalles.id = `detalles-${transpilToKebabCase(nombre)}`;
     $nombreDelVehiculo.scope = 'row';
