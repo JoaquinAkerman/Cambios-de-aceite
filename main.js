@@ -1,3 +1,3 @@
-import { inicializar } from './modules/ui.js';
+import { initialize } from './modules/ui.js';
 
-inicializar();
+initialize();
