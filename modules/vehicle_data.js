@@ -1,4 +1,4 @@
-export const dataDeVehiculos = [
+export const vehicle_data = [
   {
     name: 'Ford F100',
     nextChange: '105900km',
@@ -72,8 +72,8 @@ export const dataDeVehiculos = [
   },
   {
     name: 'Massey viejo',
-    nextChange: '1200hs',
-    nextChangeDate: '24-08-2022',
+    nextChange: '2600hs',
+    nextChangeDate: '03-02-2024',
     comment: '',
     link: 'https://drive.google.com/drive/folders/1_MVoUZMIUXP1Mks7aZiN1XUKl0HP670J?usp=sharing',
   },
@@ -121,9 +121,9 @@ export const dataDeVehiculos = [
   },
   {
     name: 'Volvo ab969**',
-    nextChange: '441444km',
-    nextChangeDate: '14-11-2023',
-    comment: 'Prox cambiar filtros gasoil',
+    nextChange: '463000km',
+    nextChangeDate: '28-1-2024',
+    comment: 'Prox cambiar filtros gasoil!!',
     link: 'https://drive.google.com/drive/folders/1BxUgoI39s6RlNdcQzoqUErPkFRrsXnks?usp=sharing',
   },
 

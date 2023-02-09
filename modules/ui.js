@@ -1,5 +1,5 @@
 import { getCurrentDate, viewDetails, sortDateForComparison } from './services.js';
-import { dataDeVehiculos } from './vehicle_data.js';
+import { vehicle_data } from './vehicle_data.js';
 import { sortAlphabetically, transpilToKebabCase } from './utilities.js';
 
 function highlight(dateChangeData, $date) {
@@ -35,7 +35,7 @@ function showVehicles(vehicleData) {
     const $viewDetails = document.createElement('td');
     const $viewDetailsButton = document.createElement('button');
     $viewDetailsButton.classList = 'btn btn-info';
-    $viewDetailsButton.textContent = 'Details';
+    $viewDetailsButton.textContent = 'Detalles';
     $viewDetailsButton.onclick = () => {
       viewDetails(link);
     };
@@ -54,11 +54,11 @@ function showVehicles(vehicleData) {
 }
 
 function updateH1(title) {
-  title.textContent = 'Vehicles';
+  title.textContent = 'Vehiculos M. Clara';
 }
 
 function initialize() {
-  showVehicles(dataDeVehiculos);
+  showVehicles(vehicle_data);
 }
 
 export { showVehicles, initialize };
