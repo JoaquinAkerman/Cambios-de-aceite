@@ -1,5 +1,12 @@
 export const vehicle_data = [
   {
+    name: 'Nissan frontier FDM-9*5',
+    nextChange: '330700km',
+    nextChangeDate: '07-02-2024',
+    comment: 'Prox cambiar aceite diferenciales y caja de cambios',
+    link: '',
+  },
+  {
     name: 'Ford F100',
     nextChange: '105900km',
     nextChangeDate: '10-08-2023',
