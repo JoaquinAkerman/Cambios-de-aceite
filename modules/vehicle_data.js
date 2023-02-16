@@ -58,9 +58,9 @@ export const vehicle_data = [
   },
   {
     name: 'Massey 4297',
-    nextChange: '6580hs',
+    nextChange: '6850hs',
     comment: 'Prox cambiar filtro combustible',
-    nextChangeDate: '05-07-2023',
+    nextChangeDate: '11-02-2024',
     link: 'https://drive.google.com/drive/folders/1KeLv38lfUafOaHYYe3AxmVQumNo5Fl0c?usp=sharing',
   },
   {
@@ -121,16 +121,16 @@ export const vehicle_data = [
   },
   {
     name: 'Volvo ad695**',
-    nextChange: '153061km',
-    comment: 'prox no cambiar filtros gasoil ',
-    nextChangeDate: '17-09-2023',
+    nextChange: '173632km',
+    comment: 'Prox cambiar filtros gasoil, y aceite caja y diferencial',
+    nextChangeDate: '16-02-2024',
     link: 'https://drive.google.com/drive/folders/1xxhuzADUWA-F_M1KHt6vbBR8YiuIQYKU?usp=sharing',
   },
   {
     name: 'Volvo ab969**',
     nextChange: '463000km',
     nextChangeDate: '28-1-2024',
-    comment: 'Prox cambiar filtros gasoil!!',
+    comment: 'Prox no cambiar filtros gasoil',
     link: 'https://drive.google.com/drive/folders/1BxUgoI39s6RlNdcQzoqUErPkFRrsXnks?usp=sharing',
   },
 
