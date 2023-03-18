@@ -30,16 +30,16 @@ export const vehicle_data = [
 
   {
     name: 'Grupo extrusores',
-    nextChange: '610hs',
-    nextChangeDate: '25-02-2023',
-    comment: '',
+    nextChange: '641hs',
+    nextChangeDate: '23-02-2024',
+    comment: 'Prox cambiar filtros de aire',
     link: 'https://drive.google.com/drive/folders/12u-i64HDN3hPGbifcGSrlDU9O8YIcgZ3?usp=sharing',
   },
   {
     name: 'Grupo gallineros motor John Deere',
-    nextChange: '319hs',
-    nextChangeDate: '24-02-2023',
-    comment: '',
+    nextChange: '252hs',
+    nextChangeDate: '23-02-2024',
+    comment: 'FUERA DE SERVICIO',
     link: 'https://drive.google.com/drive/folders/1Y3AxsyJP62cww2vmU2Q33rx9tkWx09sJ?usp=sharing',
   },
   {
@@ -152,7 +152,7 @@ export const vehicle_data = [
     name: 'Nissan Frontier jhp-7**',
     nextChange: '277000km',
     nextChangeDate: '29-08-2023',
-    comment: '',
+    comment: 'Prox cambiar aceites cajas y diferencial',
     link: 'https://drive.google.com/drive/folders/1eWKiQ5VjpTOiXW9l_s9TqlQfd1Ocx4qC',
   },
   {
