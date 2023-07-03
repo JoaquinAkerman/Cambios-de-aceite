@@ -42,7 +42,7 @@ function showVehicles(vehicleData) {
     $viewDetailsButton.id = `details-${transpilToKebabCase(name)}`;
     $vehicleName.scope = 'row';
     $vehicleName.textContent = name;
-    $nextChange.textContent = `${nextChange} or ${nextChangeDate} ${checkComment(comment)}`;
+    $nextChange.textContent = `${nextChange} o ${nextChangeDate} ${checkComment(comment)}`;
     $viewDetails.appendChild($viewDetailsButton);
     $newVehicle.appendChild($vehicleName);
     $newVehicle.appendChild($nextChange);
