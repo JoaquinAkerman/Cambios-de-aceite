@@ -39,14 +39,14 @@ export const vehicle_data = [
     name: 'Grupo gallineros motor John Deere',
     nextChange: '252hs',
     nextChangeDate: '23-02-2024',
-    comment: 'FUERA DE SERVICIO',
+    comment: '',
     link: 'https://drive.google.com/drive/folders/1Y3AxsyJP62cww2vmU2Q33rx9tkWx09sJ?usp=sharing',
   },
   {
     name: 'Grupo gallineros motor internacional',
     nextChange: '471hs',
-    nextChangeDate: '25-02-2023',
-    comment: '',
+    nextChangeDate: '',
+    comment: 'FUERA DE SERVICIO',
     link: 'https://drive.google.com/drive/folders/1qqH1fy5nMNksLYWWWOoZjzgtDCG09Cg9?usp=sharing',
   },
   {
